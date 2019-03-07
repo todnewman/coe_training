@@ -277,39 +277,3 @@ def reduce_features_pca(n, X):
     return X_reduced
 
     
-
-
-# In[ ]:
-'''
-def connect_tensorboard():
-
-    !wget 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip'
-    !unzip 'ngrok-stable-linux-amd64.zip'
-    LOG_DIR = './log'
-    get_ipython().system_raw(
-        'tensorboard --logdir {} --host 0.0.0.0 --port 6006 &'
-        .format(LOG_DIR)
-    )
-    get_ipython().system_raw('./ngrok http 6006 &')
-    ! curl -s 'http://localhost:4040/api/tunnels' | python3 -c \
-    "import sys, json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])"
-
-def call_tensorboard():
-    # Call TensorBoard for visual metrics
-
-    tbCallBack = TensorBoard(log_dir='./log', histogram_freq=1,
-                         write_graph=True,
-                         write_grads=True,
-                         batch_size=batch_size,
-                         write_images=True)
-
-    # Fit the model based on everything we've defined to date.  Write metrics to 
-    # TensorBoard
-
-    model.fit(x_train, y_train,
-          batch_size=batch_size,
-          epochs=epochs,
-          verbose=1,
-          validation_data=(x_test, y_test),
-          callbacks=[tbCallBack])
-'''
