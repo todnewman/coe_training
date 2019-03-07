@@ -275,5 +275,3 @@ def reduce_features_pca(n, X):
     X_reduced = pca.fit_transform(X)
     print("Shape of the reduced X matrix\n", X_reduced.shape)
     return X_reduced
-
-    
