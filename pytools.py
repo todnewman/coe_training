@@ -280,7 +280,7 @@ def reduce_features_pca(n, X):
 
 
 # In[ ]:
-
+'''
 def connect_tensorboard():
 
     !wget 'https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip'
@@ -312,3 +312,4 @@ def call_tensorboard():
           verbose=1,
           validation_data=(x_test, y_test),
           callbacks=[tbCallBack])
+'''
